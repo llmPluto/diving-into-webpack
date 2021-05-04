@@ -309,7 +309,7 @@ this.plugin("render", (bootstrapSource, chunk, hash, moduleTemplate, dependencyT
 
 到此为止，我们从代码上大概理清楚了webpack 是如何编译我们的源码的。总结下来主要是如下几步：
 
-1. 根据我们的webpack配置注册号对应的插件
+1. 根据我们的webpack配置注册好对应的插件
 2. 调用 compile.run 进入编译阶段，
 3. 在编译的第一阶段是 `compilation`，他会注册好不同类型的module对应的 factory，不然后面碰到了就不知道如何处理了
 4. 进入 `make` 阶段，会从 `entry` 开始进行两步操作：
